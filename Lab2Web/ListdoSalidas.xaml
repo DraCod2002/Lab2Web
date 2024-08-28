@@ -1,0 +1,59 @@
+﻿<Window x:Class="Lab2Web.ListdoSalidas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab2Web"
+        mc:Ignorable="d"
+        Title="ListdoSalidas" Height="450" Width="800">
+    <Grid>
+        <!-- Grid para los campos adicionales -->
+        <Grid Grid.Column="0" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Fecha:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+            <TextBox Name="FechaTextBox" Grid.Row="0" Grid.Column="1" Width="120" Margin="5"/>
+
+            <TextBlock Text="Peso:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+            <TextBox Name="PesoTextBox" Grid.Row="1" Grid.Column="1" Width="120" Margin="5"/>
+
+            <TextBlock Text="Tipo Auto:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+            <TextBox Name="TipoAutoTextBox" Grid.Row="2" Grid.Column="1" Width="120" Margin="5"/>
+
+            <TextBlock Text="Nombre Transportista:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+            <TextBox Name="NombreTransportistaTextBox" Grid.Row="3" Grid.Column="1" Width="120" Margin="5"/>
+
+            <TextBlock Text="Peso Ingreso:" Grid.Row="4" Grid.Column="0" Margin="5"/>
+            <TextBox Name="PesoIngresoTextBox" Grid.Row="4" Grid.Column="1" Width="120" Margin="5"/>
+
+            <TextBlock Text="Peso Salida:" Grid.Row="5" Grid.Column="0" Margin="5"/>
+            <TextBox Name="PesoSalidaTextBox" Grid.Row="5" Grid.Column="1" Width="120" Margin="5"/>
+
+            <TextBlock Text="Fecha y Hora:" Grid.Row="6" Grid.Column="0" Margin="5"/>
+            <DatePicker Name="FechaHoraDatePicker" Grid.Row="6" Grid.Column="1" Width="120" Margin="5"/>
+        </Grid>
+
+        <!-- DataGrid para mostrar los datos -->
+        <DataGrid Name="SalidasDataGrid" AutoGenerateColumns="True" Margin="150,10,10,10" />
+
+        <!-- Panel de búsqueda -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="10">
+            <TextBox Name="FechaInicioTextBox" Width="120" Margin="5"/>
+            <TextBox Name="FechaFinTextBox" Width="120" Margin="5"/>
+            <Button Content="Buscar" Width="100" Margin="5" Click="BuscarButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

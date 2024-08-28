@@ -1,0 +1,55 @@
+﻿<Window x:Class="Lab2Web.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" Height="250" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid Background="#f0f0f0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Etiqueta Usuario -->
+        <TextBlock Text="Usuario:" 
+                   VerticalAlignment="Center" 
+                   Margin="10"
+                   FontWeight="Bold" 
+                   Grid.Row="0" Grid.Column="0"/>
+
+        <!-- TextBox Usuario -->
+        <TextBox Name="UsernameTextBox" 
+                 Margin="10" 
+                 Grid.Row="0" Grid.Column="1" 
+                 Width="200"/>
+
+        <!-- Etiqueta Contraseña -->
+        <TextBlock Text="Contraseña:" 
+                   VerticalAlignment="Center" 
+                   Margin="10"
+                   FontWeight="Bold" 
+                   Grid.Row="1" Grid.Column="0"/>
+
+        <!-- PasswordBox Contraseña -->
+        <PasswordBox Name="PasswordBox" 
+                     Margin="10" 
+                     Grid.Row="1" Grid.Column="1" 
+                     Width="200"/>
+
+        <!-- Botón Iniciar Sesión -->
+        <Button Content="Iniciar Sesión" 
+                Width="150" 
+                Margin="10"
+                Grid.Row="2" 
+                Grid.ColumnSpan="2" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"
+                Background="#007ACC" 
+                Foreground="White" 
+                FontWeight="Bold"
+                Click="LoginButton_Click"/>
+    </Grid>
+</Window>
